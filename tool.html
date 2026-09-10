@@ -88,7 +88,16 @@
   <!-- ================= Tool hero ================= -->
   <section class="tool-page-hero" id="tool-hero">
     <div class="container">
-      <span class="tool-icon" id="tool-hero-icon"><i class="fa-solid fa-file-pdf"></i></span>
+      <div class="tool-breadcrumb">
+        <a href="index.html"><i class="fa-solid fa-house" style="font-size:11px"></i> Home</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="index.html#tools">Tools</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span id="breadcrumb-current">PDF Tool</span>
+      </div>
+      <div>
+        <span class="tool-icon" id="tool-hero-icon"><i class="fa-solid fa-file-pdf"></i></span>
+      </div>
       <h1 id="tool-hero-title">PDF Tool</h1>
       <p id="tool-hero-desc">Loading tool…</p>
     </div>
@@ -103,7 +112,15 @@
       <h3 id="dz-title">Select PDF files</h3>
       <p id="dz-sub">or drag &amp; drop them here</p>
       <span class="btn btn-primary btn-lg"><i class="fa-solid fa-folder-open"></i> Choose files</span>
-      <p class="dz-note"><i class="fa-solid fa-shield-halved"></i> Files are processed locally — nothing is uploaded to servers</p>
+      
+      <div class="dz-formats" id="dz-formats">
+        <span class="dz-format-badge">PDF</span>
+        <span class="dz-format-badge">100% Private</span>
+        <span class="dz-format-badge">In-Browser</span>
+        <span class="dz-format-badge">Free Forever</span>
+      </div>
+
+      <p class="dz-note"><i class="fa-solid fa-shield-halved"></i> Files are processed locally on your device — nothing is uploaded to servers</p>
       <input type="file" id="file-input" class="visually-hidden" aria-hidden="true">
     </div>
 
@@ -164,10 +181,14 @@
     <div class="container">
       <div class="footer-bottom" style="border-top:none;padding-top:0">
         <span>© 2026 PDFNova. All rights reserved.</span>
-        <div class="developer-credit">
-          <span class="dev-badge">
-            <i class="fa-solid fa-code"></i> Developed with <i class="fa-solid fa-heart dev-heart"></i> by <strong class="dev-name">Biren</strong>
-          </span>
+        <div class="developer-showcase">
+          <div class="dev-badge-luxury">
+            <span class="dev-sparkle"><i class="fa-solid fa-sparkles"></i></span>
+            <span class="dev-text">
+              Engineered with <i class="fa-solid fa-heart dev-heart"></i> by <strong class="dev-name">Biren</strong>
+            </span>
+            <span class="dev-pill-tag">Creator</span>
+          </div>
         </div>
         <span><i class="fa-solid fa-shield-halved" style="color:#818cf8"></i> 100% private, in-browser processing</span>
       </div>

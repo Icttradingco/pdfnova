@@ -130,20 +130,34 @@
   <!-- ================= Hero ================= -->
   <section class="hero" id="hero-section">
     <div class="container">
-      <div class="hero-badge"><i class="fa-solid fa-shield-halved"></i> 100% private — files never leave your device</div>
+      <div class="hero-badge">
+        <span class="pulse-indicator"></span> 100% Private Client-Side • Zero Server Uploads
+      </div>
       <h1>Every tool you need to work with PDFs, <span class="grad-text">in one place</span></h1>
       <p class="sub">Merge, split, compress, convert, edit, sign, OCR, protect and repair PDFs in seconds. 37+ professional tools, completely free, no signup, no watermark ads — processed right in your browser.</p>
 
-      <div class="hero-search">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" id="tool-search" placeholder="Search any tool… e.g. merge, compress, sign, OCR, word" autocomplete="off" aria-label="Search tools">
+      <div class="hero-search-wrap">
+        <div class="hero-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="tool-search" placeholder="Search any tool… e.g. merge, compress, sign, OCR, word" autocomplete="off" aria-label="Search tools">
+          <kbd class="search-kbd">⌘K</kbd>
+        </div>
+        <div class="quick-tags">
+          <span>Trending:</span>
+          <a href="tool.html?t=merge">Merge</a>
+          <a href="tool.html?t=compress">Compress</a>
+          <a href="tool.html?t=sign">Sign</a>
+          <a href="tool.html?t=ocr">OCR</a>
+          <a href="tool.html?t=pdf-to-word">PDF to Word</a>
+          <a href="tool.html?t=split">Split</a>
+        </div>
       </div>
 
       <div class="hero-trust">
-        <span><i class="fa-solid fa-lock"></i> No file uploads to servers</span>
-        <span><i class="fa-solid fa-infinity"></i> Unlimited use, always free</span>
-        <span><i class="fa-solid fa-bolt"></i> Instant processing</span>
-        <span><i class="fa-solid fa-mobile-screen"></i> Works on any device</span>
+        <span><i class="fa-solid fa-shield-halved"></i> 100% Private (No Uploads)</span>
+        <span><i class="fa-solid fa-infinity"></i> Unlimited Free Use</span>
+        <span><i class="fa-solid fa-bolt"></i> Instant In-Browser</span>
+        <span><i class="fa-solid fa-wand-magic-sparkles"></i> 37+ Tools</span>
       </div>
     </div>
   </section>
@@ -157,25 +171,39 @@
         <p>Pick a tool below — every tool from iLovePDF &amp; Smallpdf combined into one fast, private suite.</p>
       </div>
 
-      <div class="tool-filters" id="tool-filters" role="tablist">
-        <button class="active" data-filter="all">All tools (37)</button>
-        <button data-filter="organize">Organize</button>
-        <button data-filter="optimize">Optimize &amp; Repair</button>
-        <button data-filter="convert">Convert</button>
-        <button data-filter="edit">Edit &amp; Security</button>
+      <div class="tool-filters-wrap">
+        <div class="tool-filters" id="tool-filters" role="tablist">
+          <button class="active" data-filter="all"><i class="fa-solid fa-layer-group"></i> All tools <span class="filter-count">37</span></button>
+          <button data-filter="organize"><i class="fa-solid fa-folder-tree"></i> Organize <span class="filter-count">8</span></button>
+          <button data-filter="optimize"><i class="fa-solid fa-gauge-high"></i> Optimize &amp; Repair <span class="filter-count">3</span></button>
+          <button data-filter="convert"><i class="fa-solid fa-repeat"></i> Convert <span class="filter-count">14</span></button>
+          <button data-filter="edit"><i class="fa-solid fa-shield-halved"></i> Edit &amp; Security <span class="filter-count">12</span></button>
+        </div>
       </div>
 
       <div class="tools-grid" id="tools-grid"></div>
     </div>
   </section>
 
-  <!-- ================= Stats ================= -->
+  <!-- ================= Stats (Frosted Luxury Cards) ================= -->
   <section class="stats-band">
     <div class="container stats-grid">
-      <div><div class="stat-num"><span data-count="37">37</span>+</div><div class="stat-label">Professional tools</div></div>
-      <div><div class="stat-num"><span data-count="100">100</span>%</div><div class="stat-label">Free forever</div></div>
-      <div><div class="stat-num"><span data-count="0">0</span></div><div class="stat-label">Files stored on servers</div></div>
-      <div><div class="stat-num">&lt;<span data-count="15">15</span>s</div><div class="stat-label">Average task time</div></div>
+      <div class="stat-card">
+        <div class="stat-num"><span data-count="37">37</span>+</div>
+        <div class="stat-label">Professional tools</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num"><span data-count="100">100</span>%</div>
+        <div class="stat-label">Client-side &amp; Free</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num"><span data-count="0">0</span></div>
+        <div class="stat-label">Files stored on servers</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">&lt;<span data-count="15">15</span>s</div>
+        <div class="stat-label">Average task time</div>
+      </div>
     </div>
   </section>
 
@@ -310,10 +338,14 @@
             <span>PDF<em style="color:#a5b4fc">Nova</em></span>
           </a>
           <p>The professional, privacy-first PDF toolkit. Free forever, processed entirely in your browser with zero server uploads.</p>
-          <div class="developer-credit">
-            <span class="dev-badge">
-              <i class="fa-solid fa-code"></i> Developed with <i class="fa-solid fa-heart dev-heart"></i> by <strong class="dev-name">Biren</strong>
-            </span>
+          <div class="developer-showcase">
+            <div class="dev-badge-luxury">
+              <span class="dev-sparkle"><i class="fa-solid fa-sparkles"></i></span>
+              <span class="dev-text">
+                Engineered with <i class="fa-solid fa-heart dev-heart"></i> by <strong class="dev-name">Biren</strong>
+              </span>
+              <span class="dev-pill-tag">Creator</span>
+            </div>
           </div>
           <div class="footer-social" style="margin-top:14px">
             <a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
@@ -355,10 +387,14 @@
       </div>
       <div class="footer-bottom">
         <span>© 2026 PDFNova. All rights reserved.</span>
-        <div class="developer-credit">
-          <span class="dev-badge">
-            <i class="fa-solid fa-code"></i> Developed with <i class="fa-solid fa-heart dev-heart"></i> by <strong class="dev-name">Biren</strong>
-          </span>
+        <div class="developer-showcase">
+          <div class="dev-badge-luxury">
+            <span class="dev-sparkle"><i class="fa-solid fa-sparkles"></i></span>
+            <span class="dev-text">
+              Engineered with <i class="fa-solid fa-heart dev-heart"></i> by <strong class="dev-name">Biren</strong>
+            </span>
+            <span class="dev-pill-tag">Creator</span>
+          </div>
         </div>
         <span>Made with <i class="fa-solid fa-heart" style="color:#f43f5e"></i> for people who value privacy.</span>
       </div>
