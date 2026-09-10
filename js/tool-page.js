@@ -40,6 +40,10 @@
   var heroDesc = document.getElementById('tool-hero-desc');
   if (heroDesc) heroDesc.textContent = tool.desc;
 
+  var breadcrumbCurrent = document.getElementById('breadcrumb-current');
+  if (breadcrumbCurrent) breadcrumbCurrent.textContent = tool.name;
+
+
   // Other tools strip (exclude current)
   var otherToolsGrid = document.getElementById('other-tools-grid');
   if (otherToolsGrid) {

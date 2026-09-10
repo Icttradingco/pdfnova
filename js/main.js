@@ -46,10 +46,27 @@
         var first = grid.querySelector('.tool-card');
         if (first) window.location.href = first.getAttribute('href');
       }
+      if (e.key === 'Escape') {
+        searchInput.value = '';
+        renderGrid();
+        searchInput.blur();
+      }
+    });
+
+    // Global keyboard shortcut: Ctrl+K or Cmd+K or "/" to focus search
+    window.addEventListener('keydown', function (e) {
+      var isInput = /^(input|textarea)$/i.test(document.activeElement.tagName);
+      if (((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') || (e.key === '/' && !isInput)) {
+        e.preventDefault();
+        searchInput.focus();
+        searchInput.select();
+        window.scrollTo({ top: searchInput.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
+      }
     });
   }
 
   renderGrid();
+
 
   // ---- Mobile menu ----
   var hamburger = document.getElementById('hamburger');

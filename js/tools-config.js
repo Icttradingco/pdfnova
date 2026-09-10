@@ -659,20 +659,51 @@ function getToolById(id) {
 
 /* Render a tool card (shared by landing grid + "other tools" strips) */
 function toolCardHTML(tool) {
+  var catLabels = {
+    organize: 'Organize',
+    optimize: 'Optimize',
+    convert: 'Convert',
+    edit: 'Edit & Security'
+  };
+  var catName = catLabels[tool.category] || 'Tool';
   return '<a class="tool-card" href="tool.html?t=' + tool.id + '" style="--tool-color:' + tool.color + '" data-category="' + tool.category + '">' +
-    '<span class="tool-icon"><i class="fa-solid ' + tool.icon + '"></i></span>' +
+    '<div class="tool-card-head">' +
+      '<span class="tool-icon"><i class="fa-solid ' + tool.icon + '"></i></span>' +
+      '<span class="tool-badge">' + catName + '</span>' +
+    '</div>' +
     '<h3>' + tool.name + '</h3>' +
     '<p>' + tool.short + '</p>' +
-    '<span class="tool-go"><i class="fa-solid fa-arrow-right"></i></span>' +
+    '<div class="tool-card-footer">' +
+      '<span class="tool-action-btn">Use tool <i class="fa-solid fa-arrow-right"></i></span>' +
+    '</div>' +
     '</a>';
 }
 
-/* Build the header tools dropdown */
+/* Build the header tools dropdown (grouped by category into a modern mega-menu) */
 function buildHeaderDropdown() {
   var menu = document.getElementById('nav-tools-menu');
   if (!menu) return;
-  menu.innerHTML = PDF_TOOLS.map(function (t) {
-    return '<a href="tool.html?t=' + t.id + '">' +
-      '<i class="fa-solid ' + t.icon + '" style="background:' + t.color + '"></i>' + t.name + '</a>';
+
+  var categories = [
+    { id: 'organize', title: 'Organize', icon: 'fa-folder-tree', color: '#e11d48' },
+    { id: 'optimize', title: 'Optimize & Repair', icon: 'fa-gauge-high', color: '#059669' },
+    { id: 'convert', title: 'Convert', icon: 'fa-repeat', color: '#2563eb' },
+    { id: 'edit', title: 'Edit & Security', icon: 'fa-shield-halved', color: '#7c3aed' }
+  ];
+
+  menu.innerHTML = categories.map(function (cat) {
+    var tools = PDF_TOOLS.filter(function (t) { return t.category === cat.id; });
+    var items = tools.map(function (t) {
+      return '<a href="tool.html?t=' + t.id + '">' +
+        '<i class="fa-solid ' + t.icon + '" style="background:' + t.color + '"></i>' +
+        '<span>' + t.name + '</span>' +
+      '</a>';
+    }).join('');
+
+    return '<div class="nav-cat-group">' +
+      '<div class="nav-cat-title"><i class="fa-solid ' + cat.icon + '" style="color:' + cat.color + '"></i> ' + cat.title + '</div>' +
+      '<div class="nav-cat-items">' + items + '</div>' +
+    '</div>';
   }).join('');
 }
+
