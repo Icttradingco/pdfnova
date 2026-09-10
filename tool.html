@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDF Tool — Free Online PDF Tools | PDFNova</title>
+  <meta name="description" content="Free, private, in-browser PDF tools: merge, split, compress, convert, edit, sign, OCR, watermark and more with zero server uploads.">
+  <meta name="keywords" content="pdf tool, free online pdf tools, merge pdf, split pdf, compress pdf, ocr pdf, sign pdf, pdf to word, smallpdf alternative, ilovepdf alternative">
+  <meta name="author" content="Biren">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://pdfnova.app/tool.html">
+  <meta name="theme-color" content="#4f46e5">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pdfnova.app/tool.html">
+  <meta property="og:title" content="PDF Tool — Free Online PDF Tools | PDFNova">
+  <meta property="og:description" content="100% free, client-side private PDF processing directly inside your browser. No files uploaded.">
+  <meta property="og:site_name" content="PDFNova">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PDF Tools — PDFNova">
+  <meta name="twitter:description" content="Merge, split, compress, convert, sign, and OCR PDFs privately in your browser.">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JSON-LD Structured Data for Software Application -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "PDFNova Tool Suite",
+    "operatingSystem": "All modern web browsers",
+    "applicationCategory": "BusinessApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Biren"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ================= Header ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" id="brand-logo">
+        <span class="brand-mark"><i class="fa-solid fa-file-pdf"></i></span>
+        <span>PDF<em>Nova</em></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <div class="nav-drop">
+          <button type="button">All Tools <i class="fa-solid fa-chevron-down" style="font-size:11px"></i></button>
+          <div class="nav-drop-menu" id="nav-tools-menu"></div>
+        </div>
+        <a href="tool.html?t=merge">Merge</a>
+        <a href="tool.html?t=split">Split</a>
+        <a href="tool.html?t=compress">Compress</a>
+        <a href="tool.html?t=pdf-to-word">PDF to Word</a>
+        <a href="tool.html?t=sign">Sign</a>
+        <a href="tool.html?t=ocr">OCR</a>
+        <a href="index.html#features">Why PDFNova</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="index.html#tools" class="btn btn-ghost">All tools</a>
+        <a href="index.html" class="btn btn-primary"><i class="fa-solid fa-house"></i> Home</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= Tool hero ================= -->
+  <section class="tool-page-hero" id="tool-hero">
+    <div class="container">
+      <span class="tool-icon" id="tool-hero-icon"><i class="fa-solid fa-file-pdf"></i></span>
+      <h1 id="tool-hero-title">PDF Tool</h1>
+      <p id="tool-hero-desc">Loading tool…</p>
+    </div>
+  </section>
+
+  <!-- ================= Workspace ================= -->
+  <main class="tool-workspace" id="tool-workspace">
+
+    <!-- Dropzone -->
+    <div class="dropzone" id="dropzone" role="button" tabindex="0" aria-label="Upload files">
+      <div class="dz-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+      <h3 id="dz-title">Select PDF files</h3>
+      <p id="dz-sub">or drag &amp; drop them here</p>
+      <span class="btn btn-primary btn-lg"><i class="fa-solid fa-folder-open"></i> Choose files</span>
+      <p class="dz-note"><i class="fa-solid fa-shield-halved"></i> Files are processed locally — nothing is uploaded to servers</p>
+      <input type="file" id="file-input" class="visually-hidden" aria-hidden="true">
+    </div>
+
+    <!-- Selected files -->
+    <div class="file-list" id="file-list"></div>
+    <button class="add-more-btn" id="add-more-btn" style="display:none" type="button">
+      <i class="fa-solid fa-plus"></i> Add more files
+    </button>
+
+    <!-- Page thumbnails (organize tool) -->
+    <div class="thumbs-grid" id="thumbs-grid"></div>
+
+    <!-- Tool options -->
+    <section class="options-panel" id="options-panel" style="display:none">
+      <h3><i class="fa-solid fa-sliders"></i> Options</h3>
+      <div id="options-body"></div>
+    </section>
+
+    <!-- Action -->
+    <div class="action-bar">
+      <button class="btn btn-primary btn-lg" id="process-btn" style="display:none" type="button">
+        <i class="fa-solid fa-bolt"></i> <span id="process-btn-label">Process</span>
+      </button>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-wrap" id="progress-wrap" aria-live="polite">
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+      <div class="progress-label" id="progress-label">Processing…</div>
+    </div>
+
+    <!-- Error -->
+    <div class="error-banner" id="error-banner" role="alert">
+      <i class="fa-solid fa-triangle-exclamation"></i><span id="error-text"></span>
+    </div>
+
+    <!-- Result -->
+    <section class="result-panel" id="result-panel" aria-live="polite">
+      <div class="res-icon"><i class="fa-solid fa-check"></i></div>
+      <h3>Your file is ready!</h3>
+      <p class="res-sub" id="result-sub">Processed privately on your device.</p>
+      <div class="result-downloads" id="result-downloads"></div>
+      <button class="result-again" id="result-again" type="button"><i class="fa-solid fa-rotate-left"></i> Start over with new files</button>
+    </section>
+
+    <!-- Dynamic On-Page SEO Guide & FAQ -->
+    <div id="tool-seo-section" class="tool-seo-section"></div>
+
+    <!-- Other tools -->
+    <section class="other-tools">
+      <h3>Try another tool</h3>
+      <div class="tools-grid" id="other-tools-grid"></div>
+    </section>
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer" style="margin-top:0">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;padding-top:0">
+        <span>© 2026 PDFNova. All rights reserved.</span>
+        <div class="developer-credit">
+          <span class="dev-badge">
+            <i class="fa-solid fa-code"></i> Developed with <i class="fa-solid fa-heart dev-heart"></i> by <strong class="dev-name">Biren</strong>
+          </span>
+        </div>
+        <span><i class="fa-solid fa-shield-halved" style="color:#818cf8"></i> 100% private, in-browser processing</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+
+  <script src="js/tools-config.js"></script>
+  <script src="js/pdf-engine.js"></script>
+  <script src="js/tool-page.js"></script>
+</body>
+</html>

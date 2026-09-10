@@ -1,0 +1,6 @@
+# Production robots.txt for PDFNova
+User-agent: *
+Allow: /
+
+# Direct sitemap reference
+Sitemap: https://pdfnova.app/sitemap.xml

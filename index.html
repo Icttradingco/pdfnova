@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDFNova — Free Online PDF Tools (100% Private, In-Browser)</title>
+  <meta name="description" content="Every tool you need to work with PDFs in one place. Merge, split, compress, convert, edit, sign, OCR, protect and watermark PDF files 100% free with zero server uploads.">
+  <meta name="keywords" content="pdf tools, free pdf editor, merge pdf, split pdf, compress pdf, ocr pdf, sign pdf, pdf to word, word to pdf, excel to pdf, convert pdf, smallpdf alternative, ilovepdf alternative, private pdf tools">
+  <meta name="author" content="Biren">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://pdfnova.app/">
+  <meta name="theme-color" content="#4f46e5">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pdfnova.app/">
+  <meta property="og:title" content="PDFNova — Free Online PDF Tools (100% Private, In-Browser)">
+  <meta property="og:description" content="Merge, split, compress, convert, edit, sign, OCR, protect and watermark PDF files in seconds. 100% free and client-side private.">
+  <meta property="og:site_name" content="PDFNova">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PDFNova — Free Online PDF Tools">
+  <meta name="twitter:description" content="The privacy-first PDF toolkit with 37+ professional tools. 100% in-browser, no upload limits, free forever.">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- JSON-LD Structured Data (Production SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://pdfnova.app/#webapp",
+        "name": "PDFNova",
+        "url": "https://pdfnova.app/",
+        "description": "Every tool you need to work with PDFs in one place. 100% private, client-side, zero-server processing.",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All modern browsers (Chrome, Firefox, Safari, Edge)",
+        "browserRequirements": "Requires JavaScript. HTML5 & WebAssembly supported.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Biren"
+        },
+        "featureList": [
+          "Merge PDF", "Split PDF", "Compress PDF", "OCR PDF", "Sign PDF", "Edit PDF", "Redact PDF",
+          "PDF to Word", "Word to PDF", "Excel to PDF", "PDF to Excel", "Scan to PDF", "AI PDF Summarizer"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://pdfnova.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is PDFNova really free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, every tool on PDFNova is completely free with no usage limits, no registration required, and no hidden premium paywalls."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are my files uploaded to a server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. PDFNova executes all processing locally inside your browser using client-side JavaScript. Your documents never leave your computer or phone."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does PDFNova compare to iLovePDF and Smallpdf?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PDFNova includes all the major features of iLovePDF and Smallpdf (merge, split, compress, convert to/from Office, OCR, eSign, edit, protect, repair, etc.) while guaranteeing 100% client-side confidentiality with zero ads, zero watermark stamps, and zero server storage."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ================= Header ================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" id="brand-logo">
+        <span class="brand-mark"><i class="fa-solid fa-file-pdf"></i></span>
+        <span>PDF<em>Nova</em></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <div class="nav-drop">
+          <button type="button">All Tools <i class="fa-solid fa-chevron-down" style="font-size:11px"></i></button>
+          <div class="nav-drop-menu" id="nav-tools-menu"></div>
+        </div>
+        <a href="tool.html?t=merge">Merge</a>
+        <a href="tool.html?t=split">Split</a>
+        <a href="tool.html?t=compress">Compress</a>
+        <a href="tool.html?t=pdf-to-word">PDF to Word</a>
+        <a href="tool.html?t=sign">Sign</a>
+        <a href="tool.html?t=ocr">OCR</a>
+        <a href="index.html#features">Why PDFNova</a>
+      </nav>
+
+      <div class="header-cta">
+        <a href="index.html#tools" class="btn btn-ghost">Explore tools</a>
+        <a href="tool.html?t=merge" class="btn btn-primary"><i class="fa-solid fa-bolt"></i> Start now</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= Hero ================= -->
+  <section class="hero" id="hero-section">
+    <div class="container">
+      <div class="hero-badge"><i class="fa-solid fa-shield-halved"></i> 100% private — files never leave your device</div>
+      <h1>Every tool you need to work with PDFs, <span class="grad-text">in one place</span></h1>
+      <p class="sub">Merge, split, compress, convert, edit, sign, OCR, protect and repair PDFs in seconds. 37+ professional tools, completely free, no signup, no watermark ads — processed right in your browser.</p>
+
+      <div class="hero-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="tool-search" placeholder="Search any tool… e.g. merge, compress, sign, OCR, word" autocomplete="off" aria-label="Search tools">
+      </div>
+
+      <div class="hero-trust">
+        <span><i class="fa-solid fa-lock"></i> No file uploads to servers</span>
+        <span><i class="fa-solid fa-infinity"></i> Unlimited use, always free</span>
+        <span><i class="fa-solid fa-bolt"></i> Instant processing</span>
+        <span><i class="fa-solid fa-mobile-screen"></i> Works on any device</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Tools grid ================= -->
+  <section class="section" id="tools">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">The Complete Toolkit</span>
+        <h2>All PDF tools, beautifully simple</h2>
+        <p>Pick a tool below — every tool from iLovePDF &amp; Smallpdf combined into one fast, private suite.</p>
+      </div>
+
+      <div class="tool-filters" id="tool-filters" role="tablist">
+        <button class="active" data-filter="all">All tools (37)</button>
+        <button data-filter="organize">Organize</button>
+        <button data-filter="optimize">Optimize &amp; Repair</button>
+        <button data-filter="convert">Convert</button>
+        <button data-filter="edit">Edit &amp; Security</button>
+      </div>
+
+      <div class="tools-grid" id="tools-grid"></div>
+    </div>
+  </section>
+
+  <!-- ================= Stats ================= -->
+  <section class="stats-band">
+    <div class="container stats-grid">
+      <div><div class="stat-num"><span data-count="37">37</span>+</div><div class="stat-label">Professional tools</div></div>
+      <div><div class="stat-num"><span data-count="100">100</span>%</div><div class="stat-label">Free forever</div></div>
+      <div><div class="stat-num"><span data-count="0">0</span></div><div class="stat-label">Files stored on servers</div></div>
+      <div><div class="stat-num">&lt;<span data-count="15">15</span>s</div><div class="stat-label">Average task time</div></div>
+    </div>
+  </section>
+
+  <!-- ================= Features ================= -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Why PDFNova</span>
+        <h2>Built for privacy, speed and polish</h2>
+        <p>Unlike traditional PDF sites, PDFNova never uploads your confidential documents to external servers.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="f-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Private by design</h3>
+          <p>All processing happens locally in your browser using modern WebAssembly &amp; JavaScript. Your contracts, invoices and IDs never touch a server.</p>
+        </div>
+        <div class="feature-card">
+          <div class="f-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>Blazing fast</h3>
+          <p>No upload or download queues. Files are processed instantly on your own device — even large documents finish in seconds.</p>
+        </div>
+        <div class="feature-card">
+          <div class="f-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+          <h3>Free, no limits</h3>
+          <p>No accounts, no daily quotas, no premium paywalls, no watermarks slapped on your output. Every tool, unlimited, forever.</p>
+        </div>
+        <div class="feature-card">
+          <div class="f-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <h3>Any device</h3>
+          <p>Fully responsive design that works beautifully on desktop, tablet and phone — no app installation required.</p>
+        </div>
+        <div class="feature-card">
+          <div class="f-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <h3>Professional results</h3>
+          <p>Precise page handling, high-resolution conversion, eSignatures, OCR, and clean typography options that keep your documents looking sharp.</p>
+        </div>
+        <div class="feature-card">
+          <div class="f-icon"><i class="fa-solid fa-universal-access"></i></div>
+          <h3>Simple for everyone</h3>
+          <p>Drag, drop, done. Clear steps and friendly guidance make even complex PDF jobs effortless for non-technical users.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= How it works ================= -->
+  <section class="section" id="how-it-works" style="background:#fff;border-block:1px solid var(--line)">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2>Three steps. That's it.</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3>Choose a tool</h3>
+          <p>Pick from 37+ professional tools — merge, split, compress, convert, sign, edit and more.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>Drop your files</h3>
+          <p>Drag &amp; drop or browse. Adjust options like page ranges, quality, signature, or password.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3>Download instantly</h3>
+          <p>Your new file is ready in seconds — processed privately on your own device.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Is PDFNova really free?</summary>
+          <div class="faq-body">Yes — every tool is completely free with no usage limits, no signup and no hidden premium tiers.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Are my files uploaded to a server?</summary>
+          <div class="faq-body">No. PDFNova processes everything locally in your browser using modern client-side libraries. Your files never leave your device, which makes it ideal for confidential documents, tax forms, and NDAs.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is there a file size limit?</summary>
+          <div class="faq-body">There is no artificial limit. Practical limits depend on your device's memory — most documents up to a few hundred megabytes work seamlessly on a modern computer or phone.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Which formats can I convert?</summary>
+          <div class="faq-body">You can convert PDF to Word (.docx), Excel (.csv/.xlsx), PowerPoint (.pptx), JPG, PNG, and Text. You can also convert Word, Excel, PowerPoint, JPG, PNG, HTML, and camera scans into PDF!</div>
+        </details>
+        <details class="faq-item">
+          <summary>Does it work on my phone?</summary>
+          <div class="faq-body">Absolutely. The whole site is responsive and touch-friendly — you can sign, merge, compress, or scan a document straight from your phone's browser.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How does the OCR tool work?</summary>
+          <div class="faq-body">Our OCR (Optical Character Recognition) runs directly in your browser using WebAssembly technology. It inspects scanned PDFs and photos, identifies characters, and produces selectable, copyable text with zero data sent across the internet.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-band">
+        <h2>Ready to master your PDFs?</h2>
+        <p>Jump into our most-used tools, or browse the complete 37+ tool suite above.</p>
+        <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
+          <a href="tool.html?t=merge" class="btn btn-white btn-lg"><i class="fa-solid fa-object-group"></i> Merge PDFs</a>
+          <a href="tool.html?t=sign" class="btn btn-white btn-lg"><i class="fa-solid fa-signature"></i> Sign PDF</a>
+          <a href="tool.html?t=ocr" class="btn btn-white btn-lg"><i class="fa-solid fa-wand-magic-sparkles"></i> OCR PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a href="index.html" class="brand" style="color:#fff">
+            <span class="brand-mark"><i class="fa-solid fa-file-pdf"></i></span>
+            <span>PDF<em style="color:#a5b4fc">Nova</em></span>
+          </a>
+          <p>The professional, privacy-first PDF toolkit. Free forever, processed entirely in your browser with zero server uploads.</p>
+          <div class="developer-credit">
+            <span class="dev-badge">
+              <i class="fa-solid fa-code"></i> Developed with <i class="fa-solid fa-heart dev-heart"></i> by <strong class="dev-name">Biren</strong>
+            </span>
+          </div>
+          <div class="footer-social" style="margin-top:14px">
+            <a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Organize</h4>
+          <a href="tool.html?t=merge">Merge PDF</a>
+          <a href="tool.html?t=split">Split PDF</a>
+          <a href="tool.html?t=organize">Organize PDF</a>
+          <a href="tool.html?t=crop">Crop PDF</a>
+          <a href="tool.html?t=flatten">Flatten PDF</a>
+          <a href="tool.html?t=extract">Extract pages</a>
+          <a href="tool.html?t=remove">Remove pages</a>
+        </div>
+        <div>
+          <h4>Convert</h4>
+          <a href="tool.html?t=pdf-to-word">PDF to Word</a>
+          <a href="tool.html?t=word-to-pdf">Word to PDF</a>
+          <a href="tool.html?t=pdf-to-excel">PDF to Excel</a>
+          <a href="tool.html?t=pdf-to-jpg">PDF to JPG</a>
+          <a href="tool.html?t=jpg-to-pdf">JPG to PDF</a>
+          <a href="tool.html?t=scan-to-pdf">Scan to PDF</a>
+          <a href="tool.html?t=pdf-to-pdfa">PDF to PDF/A</a>
+        </div>
+        <div>
+          <h4>Edit &amp; Security</h4>
+          <a href="tool.html?t=edit">Edit PDF</a>
+          <a href="tool.html?t=sign">Sign PDF</a>
+          <a href="tool.html?t=ocr">OCR PDF</a>
+          <a href="tool.html?t=compress">Compress PDF</a>
+          <a href="tool.html?t=protect">Protect PDF</a>
+          <a href="tool.html?t=unlock">Unlock PDF</a>
+          <a href="tool.html?t=compare">Compare PDF</a>
+          <a href="tool.html?t=ai-summarize">AI Summarizer</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 PDFNova. All rights reserved.</span>
+        <div class="developer-credit">
+          <span class="dev-badge">
+            <i class="fa-solid fa-code"></i> Developed with <i class="fa-solid fa-heart dev-heart"></i> by <strong class="dev-name">Biren</strong>
+          </span>
+        </div>
+        <span>Made with <i class="fa-solid fa-heart" style="color:#f43f5e"></i> for people who value privacy.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/tools-config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
